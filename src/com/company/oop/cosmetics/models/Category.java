@@ -49,31 +49,19 @@ public class Category {
     }
 
 
-//    public String print() {
-//        StringBuilder result = new StringBuilder();
-//        result.append(String.format("#Category: %s\n",name));
-//        if (products.isEmpty()){
-//            result.append(" #No product in this category");
-//        } else {
-//            for (Product product: products) {
-//                result.append(product.print());
-//            }
-//        }
-//        return result.toString();
-//    }
-
     public String print() {
-        if (products.isEmpty()) {
-            return String.format("#Category: %s%n" +
-                    " #No product in this category", this.name);
+        StringBuilder result = new StringBuilder();
+        result.append(String.format("#Category: %s\n",name));
+        if (products.isEmpty()){
+            result.append(" #No product in this category");
         } else {
-            return String.format("#Category: %s%n" +
-                    " #%s %s%n" +
-                    " #Price: %.2f%n" +
-                    " #Gender: %s%n" +
-                    " ===" , this.name, products.get(0), products.get(1), products.get(2), products.get(3));
+            for (Product product: products) {
+                result.append(product.print());
+            }
         }
+        return result.toString();
     }
+
 
     @Override
     public String toString() {

@@ -1,10 +1,6 @@
 package com.company.oop.cosmetics.models;
 
-import com.company.oop.cosmetics.utils.ValidationHelpers;
-
 import java.util.Objects;
-
-import static com.company.oop.cosmetics.utils.ValidationHelpers.validateStringLength;
 
 public class Product {
 
@@ -18,7 +14,7 @@ public class Product {
     private String brand;
     private double price;
     private GenderType gender;
-    
+
     // "Each product in the system has name, brand, price and gender."
 
     public Product(String name, String brand, double price, GenderType gender) {
@@ -72,15 +68,7 @@ public class Product {
         return gender;
     }
 
-//    @Override
-//    public String toString() {
-//        return "Product{" +
-//                "name='" + name + '\'' +
-//                ", brand='" + brand + '\'' +
-//                ", price=" + price +
-//                ", gender='" + gender + '\'' +
-//                '}';
-//    }
+
         public String print() {
 
         return String.format(
